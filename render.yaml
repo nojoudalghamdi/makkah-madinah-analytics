@@ -1,1 +1,8 @@
-# DO NOT EDIT - This configures deploymentservices:  - type: web    name: makkah-dashboard    env: r    plan: free    buildCommand: R -f install_packages.R    startCommand: R -e "shiny::runApp('app.R', host='0.0.0.0', port=8080)"
+services:
+  - type: web
+    name: makkah-madinah-analytics
+    env: r
+    plan: free
+    root: .
+    buildCommand: R -f install_packages.R
+    startCommand: R -e "shiny::runApp('app.R', port = 3838, host = '0.0.0.0')"
