@@ -3,6 +3,5 @@ services:
     name: makkah-madinah-analytics
     env: r
     plan: free
-    root: .
     buildCommand: R -f install_packages.R
-    startCommand: R -e "shiny::runApp('app.R', port = 3838, host = '0.0.0.0')"
+    startCommand: R -e "shiny::runApp('app.R', port=3838, host='0.0.0.0')"
